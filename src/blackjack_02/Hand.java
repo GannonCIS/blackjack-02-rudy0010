@@ -18,7 +18,9 @@ public class Hand {
     public Hand(){}
     
     public void addCard(Card newCard){
-        
+        if(numOfCards < 5){
+            
+        }
     }
     
     public int getScore(){
