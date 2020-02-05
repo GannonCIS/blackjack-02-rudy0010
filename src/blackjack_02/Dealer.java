@@ -20,18 +20,7 @@ public class Dealer {
     }
     
     public void playOutPlayerHands(){
-        for(){
-            if(myPlayers[i].getMyHand().getNumOfCards()<5){
-                if(myPlayers[i].getMyHand().getScore()<21){
-                    System.out.println("Want a card?");
-                    String response = scan.next();
-                    if(response.equals("y")){
-                        myPlayers[i].getMyHand().addCard(myDeck.dealCard());
-                        myPlayers[i].getMyHand().printHand();
-                    }
-                }
-            }
-        }    
+        
     }
     
     public void playOutDealerHand(){
