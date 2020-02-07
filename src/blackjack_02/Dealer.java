@@ -52,7 +52,24 @@ public class Dealer {
     }
     
     public void playOutPlayerHands(){
-        
+        for(Player currPlayer : myPlayers){
+            System.out.println(currPlayer.getName() + "'s Hand");
+            currPlayer.getMyHand().printHand();
+            while(currPlayer.getMyHand().getNumOfCards() < 5 && 
+                    currPlayer.getMyHand().getScore() < 21){
+                System.out.println(currPlayer.getName() +
+                        ", would you like to hit? (y/n)");
+                char opt = scan.next().toLowerCase().charAt(0);
+                System.out.println("\n");
+                if(opt=='y'){
+                    currPlayer.getMyHand().addCard(myDeck.dealCard());
+                }else{
+                    break;
+                }
+                System.out.println(currPlayer.getName() + "'s Hand");
+                currPlayer.getMyHand().printHand();
+            }
+        }
     }
     
     public void playOutDealerHand(){
