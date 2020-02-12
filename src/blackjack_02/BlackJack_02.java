@@ -19,6 +19,8 @@ public class BlackJack_02 {
         Dealer fred = new Dealer();
         fred.dealOpeningHand();
         fred.playOutPlayerHands();
+        System.out.println("\n");
+        fred.playOutDealerHand();
         fred.declareWinners();
         
     }
