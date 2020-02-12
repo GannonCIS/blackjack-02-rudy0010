@@ -81,7 +81,24 @@ public class Dealer {
     }
     
     public void declareWinners(){
-        
+        for(Player currPlayer : myPlayers){
+            if(currPlayer.getMyHand().getScore() > 21){
+                System.out.println("You busted, dealer wins!");
+            }else if(dealerHand.getScore() > 21){
+                System.out.println("Dealer busted, you win, " +
+                        currPlayer.getName() + "!");
+            }else if(dealerHand.getScore() == 
+                    currPlayer.getMyHand().getScore()){
+                System.out.println(currPlayer.getName() + " matched the"
+                        + " dealer's score! Dealer wins!");
+            }else if(dealerHand.getScore() > 
+                    currPlayer.getMyHand().getScore()){
+                System.out.println("Dealer wins! " + currPlayer.getName() 
+                    + " loses!");
+            }else{
+                System.out.println(currPlayer.getName() + " wins!");
+            }
+        }
     }
     
 }
